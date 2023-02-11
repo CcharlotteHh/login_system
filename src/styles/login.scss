@@ -65,12 +65,13 @@
           padding: 2%;
           border-radius: 10px;
           background-color: $blue;
-          border-color: white;
+          border-color: transparent;
+          &:focus{
+            border-color: white;
+          }
         }
 
-        input:focus{
-          border-color: green;
-        }
+       
       }
       button {
         position: absolute;
