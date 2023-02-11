@@ -1,7 +1,9 @@
 import { useRef, useState, useEffect, useContext } from "react";
-import AuthContext from "./context/AuthProvider";
-import axios from "./api/axios";
-import { Links ,Link } from "react-router-dom";
+import "./styles/login.scss";
+// import AuthContext from "./context/AuthProvider";
+// import axios from "./api/axios";
+import { Link } from "react-router-dom";
+import "./bg.jpg";
  
 export default function Login() {
   
@@ -41,7 +43,8 @@ export default function Login() {
           </p>
         </section>
       ) : (
-        <section>
+        
+        <section className="loginScreen">   
           <p
             ref={errRef}
             className={errMsg ? "errmsg" : "offscreen"}
@@ -49,7 +52,11 @@ export default function Login() {
           >
             {errMsg}
           </p>
+          <figure><img src="bg.jpg" alt="bgImg"></img></figure>
+          <div className="formContainer">
           <form className="loginForm" onSubmit={handleLogin}>
+          <h1>Login System</h1>
+          <div className="inputContainer">
             <label htmlFor="user">Username</label>
             <input
               className="loginInput"
@@ -63,6 +70,8 @@ export default function Login() {
                 setUser(e.target.value);
               }}
             />
+            </div>
+            <div className="inputContainer">
             <label htmlFor="password">Password</label>
             <input
               className="loginInput"
@@ -74,8 +83,11 @@ export default function Login() {
                 setPwd(e.target.value);
               }}
             />
+            </div>
             <button>Log in!</button>
+            
           </form>
+          </div>
         </section>
       )}
     </>

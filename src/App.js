@@ -5,7 +5,7 @@ import { Route, Routes } from "react-router-dom"
 function App() {
   return (
    
-       <Routes>
+      <Routes>
       <Route path="home" element={<Home />} />
       <Route path="/" element={<Login />} />
       </Routes>
