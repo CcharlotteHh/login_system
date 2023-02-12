@@ -1,0 +1,8 @@
+-Form
+ -label voor username & password
+ -input voor username & password
+ -button voor inloggen
+ -placeholder voor username & password
+ -tekst met a tag voor voor het maken van een account wanneer deze er nog niet is 
+-ontwerp voor desktop mobile en tablet
+- 'decoratie om de inlog pagina mooi en te maken 
