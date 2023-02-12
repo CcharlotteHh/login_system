@@ -3,7 +3,7 @@ import "./styles/login.scss";
 // import AuthContext from "./context/AuthProvider";
 // import axios from "./api/axios";
 import { Link } from "react-router-dom";
-import "./bg.jpg";
+var Diamond = require('./bg.jpg');
  
 export default function Login() {
   
@@ -52,7 +52,7 @@ export default function Login() {
           >
             {errMsg}
           </p>
-          <figure><img src="bg.jpg" alt="bgImg"></img></figure>
+          <figure><img src={Diamond} alt="bgImg"></img></figure>
           <div className="formContainer">
           <form className="loginForm" onSubmit={handleLogin}>
           <h1>Login System</h1>
@@ -65,6 +65,7 @@ export default function Login() {
               autoComplete="false"
               ref={userRef}
               type="text"
+              tabIndex="1"
               value={user}
               onChange={(e) => {
                 setUser(e.target.value);
@@ -78,15 +79,20 @@ export default function Login() {
               placeholder="pwd"
               id="pwd"
               type="password"
+              tabIndex="2"
               value={pwd}
               onChange={(e) => {
                 setPwd(e.target.value);
               }}
             />
             </div>
-            <button>Log in!</button>
-            
-          </form>
+
+            <button
+            tabIndex="3"
+            >Log in!</button>
+             <p>Dont have an account yet? <a href="#">Sign Up</a></p>
+            </form>
+           
           </div>
         </section>
       )}
