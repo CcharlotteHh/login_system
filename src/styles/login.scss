@@ -25,6 +25,7 @@
     @include flexbox($alignItems: center, $justifyContent: center);
     width: 50%;
     height: 100%;
+
     background-color: $blue;
     @include md{
       width: 100%;
@@ -33,6 +34,7 @@
 
     .loginForm {
       position: relative;
+      padding-bottom: 10%;
       @include flexbox(
         $alignItems: center,
         $justifyContent: flex-start,
@@ -43,13 +45,16 @@
      
       background-color: $darkblue;
       border-radius: 10px;
-      @include lg{
+      @include xl{
         width: 90%;
+        height: 65%;
+        
       }
       @include md{
         width: 80%;
-        height: 75%;
+        height: 80%;
       }
+     
       h1 {
         margin-top: 2%;
         font-size: $secondaryFontSize;
@@ -77,10 +82,23 @@
 
        
       }
-      p{
+      .linkContainer{
         position: absolute;
         bottom: 0;
+        margin-top: 5%;
         margin-bottom: 5%;
+        a{
+          color: $mint;
+         
+          &:hover{
+            color:$blue;
+          }
+        }
+        .forgotPwd{
+          margin-top:5px ;
+          margin-bottom:5px ;
+          text-align: center;
+        }
       }
       button {
         margin-top: 5%;
@@ -90,6 +108,10 @@
         border: none;
         background-color: $blue;
         font-size: 1.2rem;
+        &:hover{
+          background-color:$darkblue;
+          border: 1px solid white;
+        }
       }
     }
   }
